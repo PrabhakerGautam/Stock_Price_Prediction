@@ -110,7 +110,7 @@ def get_key(dictionary, value):
 # Main function to create the app
 def main():
     st.sidebar.title('Navigation')
-    page = st.sidebar.radio('Go to', ['Download and Visualize' , 'Forecasting'])
+    page = st.sidebar.radio('Go to', ['Download and Visualize', 'Forecasting'])
 
     if page == 'Download and Visualize':
         st.title('Download and Visualize Data')
@@ -161,7 +161,7 @@ def main():
 
                 pred_ARIMA = rolling_forecast(df["Close"], TRAIN_LEN, HORIZON, WINDOW, 'ARIMA')
 
-                test.loc[:, 'pred_ARIMA'] = pred_ARIMA[1:]
+                test.loc[:, 'pred_ARIMA'] = pred_ARIMA[:]
                 st.write(test.tail())
                 
                 # Plot original data and forecasted values
