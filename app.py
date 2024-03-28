@@ -144,14 +144,14 @@ def main():
         
         if st.sidebar.button('Forecast'):
             with st.spinner("Forecasting in progress..."):
-                df = yf.download(stock_symbol, start=start_date, end=end_date)
+                df = yf.download(stock_symbol, '2014-01-01', end=end_date)
                 del df['Open']
                 del df['High']
                 del df['Low']
                 del df['Adj Close']
                 del df['Volume']
-                train = df[:(int(.98*len(df['Close'])))]
-                test = df[(int(.98*len(df['Close']))):]
+                train = df[(df.index >= '2014-01-01') & (df.index <= end_date)]['Close']
+                test =  df[(df.index >= start_date) & (df.index <= end_date)]['Close']
                 #st.write(test.tail())
                 #HORIZON = st.sidebar.number_input('Enter forecast horizon (in days):')
                 TRAIN_LEN = len(train)
