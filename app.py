@@ -186,12 +186,12 @@ def main():
 
                 test.loc[:, 'pred_ARIMA'] = pred_ARIMA[:]
                 st.write(test.tail())
-                
+                key_ = get_key(stock_symbols, stock_symbol)
                 # Plot original data and forecasted values
                 fig, ax = plt.subplots(figsize=(10, 6))
                 ax.plot(df['Close'][TRAIN_LEN:], label='Original Data')
                 ax.plot(test['pred_ARIMA'], 'k--', label='ARIMA')
-                ax.set_title(f'{key_} Close Price')
+                ax.set_title(f'Forecast for {key_}')
                 #ax.set_title(f'Forecast for {stock_symbol}')
                 ax.set_xlabel('Date')
                 ax.set_ylabel('Price (USD)')
