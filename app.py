@@ -30,8 +30,8 @@ warnings.filterwarnings('ignore')
 # Disable warning about passing a figure to st.pyplot()
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # Define the stock symbols
-#stock_symbols = { 'Google':'GOOGL', 'Apple':'AAPL'}
-stock_symbols = {'Microsoft': 'MSFT', 
+stock_symbols = { 'Google':'GOOGL', 'Apple':'AAPL',
+                  'Microsoft': 'MSFT', 
                  'Amazon': 'AMZN', 
                  'Facebook': 'FB', 
                  'Tesla': 'TSLA', 
