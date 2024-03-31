@@ -30,7 +30,29 @@ warnings.filterwarnings('ignore')
 # Disable warning about passing a figure to st.pyplot()
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # Define the stock symbols
-stock_symbols = { 'Google':'GOOGL', 'Apple':'AAPL'}
+#stock_symbols = { 'Google':'GOOGL', 'Apple':'AAPL'}
+stock_symbols = {'Microsoft': 'MSFT', 
+                 'Amazon': 'AMZN', 
+                 'Facebook': 'FB', 
+                 'Tesla': 'TSLA', 
+                 'Alphabet': 'GOOG', 
+                 'Netflix': 'NFLX', 
+                 'Nvidia': 'NVDA', 
+                 'Adobe': 'ADBE', 
+                 'Intel': 'INTC', 
+                 'PayPal': 'PYPL',
+                'Johnson & Johnson': 'JNJ',
+                 'Visa': 'V',
+                 'JPMorgan Chase': 'JPM',
+                 'Walmart': 'WMT',
+                 'Procter & Gamble': 'PG',
+                 'Bank of America': 'BAC',
+                 'Mastercard': 'MA',
+                 'Verizon': 'VZ',
+                 'Coca-Cola': 'KO',
+                 'Disney': 'DIS'}
+
+
 
 # Function to download stock data
 @st.cache_data
