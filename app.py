@@ -195,7 +195,7 @@ def main():
                 #ax.set_title(f'Forecast for {stock_symbol}')
                 ax.set_xlabel('Date')
                 ax.set_ylabel('Price (USD)')
-                ax.xticks(rotation=45) 
+                plt.xticks(rotation=45) 
                 ax.legend()
                 st.pyplot(fig)
         
